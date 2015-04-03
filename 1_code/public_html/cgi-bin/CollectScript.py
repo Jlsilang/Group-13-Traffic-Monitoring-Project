@@ -5,7 +5,7 @@ print "Content-Type: text/html\n"
 '''
 Created on Mar 15, 2011
 
-@author: Justin Silang
+@author: Justin Silang, Charu Jain, Akshay Sardana 
 '''
 
 import datetime, TrafficParser, WeatherParser
