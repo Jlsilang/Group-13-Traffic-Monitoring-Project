@@ -1,0 +1,223 @@
+body
+{
+background-image:url(wallpaper.jpg);
+background-size: 100% 100%;
+font-family: "Adequate", Verdana; 
+color:white; 
+font-size: 24px; 
+text-align: center; 
+}
+
+.hovtrans{
+color:white;
+transition: color 0.5s;
+}
+
+.hovtrans:hover{
+color: #ffbe43;
+}
+
+@font-face {
+    font-family: 'Adequate'; /*a name to be used later*/
+    src: url('LANENAR_.ttf') format('truetype');
+}
+a{
+text-decoration: none; 
+color: white;
+transition: color 0.5s;
+
+}
+
+a:hover{
+color: #ffbe43;
+}
+
+
+#mapPosition{
+	width:1200px; 
+	margin-left:auto;
+	margin-right:auto; 
+	
+}
+#title {
+font-size: 30px; 
+transition: color 0.5s;
+}
+#title:hover {
+color: #ffbe43;
+}
+.custom-dropdown--large {
+    font-size: 1.5em;
+}
+
+.custom-dropdown--small {
+    font-size: .7em;
+}
+
+.custom-dropdown__select{
+    font-size: inherit; /* inherit size from .custom-dropdown */
+    padding: .3em; /* add some space*/
+    margin: 0; /* remove default margins */
+}
+
+.custom-dropdown__select--white {
+    background-color: #fff;
+    color: #444;    
+}
+
+@supports (pointer-events: none) and
+      ((-webkit-appearance: none) or
+      (-moz-appearance: none) or
+      (appearance: none)) {
+
+    .custom-dropdown {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .custom-dropdown__select {
+        padding-right: 2.5em; /* accommodate with the pseudo elements for the dropdown arrow */
+        border: 0;
+        border-radius: 3px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;    
+    }
+
+    .custom-dropdown::before,
+    .custom-dropdown::after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+    }
+
+    .custom-dropdown::after { /*  Custom dropdown arrow */
+        content: "\25BC";
+        height: 1em;
+        font-size: .625em;
+        line-height: 0.8;
+        right: 1.2em;
+        top: 50%; margin-top: -.5em;
+    }
+
+    .custom-dropdown::before { /*  Custom dropdown arrow cover */
+        width: 2em;
+        right: 0; top: 0; bottom: 0;
+        border-radius: 0 3px 3px 0;
+    }
+
+    .custom-dropdown__select[disabled] {
+        color: rgba(0,0,0,.3);
+    }
+
+    .custom-dropdown.custom-dropdown--disabled::after {
+        color: rgba(0,0,0,.1);
+    }
+
+    /* White dropdown style */
+    .custom-dropdown--white::before {
+        background-color: #fff;
+        border-left: 1px solid rgba(0,0,0,.1);
+    }
+
+    .custom-dropdown--white::after {
+        color: rgba(0,0,0,.9);
+    }
+
+    /* FF only temp fix */
+    @-moz-document url-prefix() {
+        .custom-dropdown__select             { padding-right: .9em }
+        .custom-dropdown--large .custom-dropdown__select { padding-right: 1.3em }
+        .custom-dropdown--small .custom-dropdown__select { padding-right: .5em }
+    }
+}
+
+ 
+.textbox { 
+    border: 1px solid #ffffff; 
+    -webkit-border-radius: 30px; 
+    -moz-border-radius: 30px; 
+    border-radius: 30px; 
+    outline:0; 
+    height:30px; 
+    width: 100px; 
+    padding-left:10px; 
+    padding-right:10px; 
+  } 
+  
+.styled-button-5 {
+	background-color:#ffbe43;
+	color:white;
+	font-family:'Adequate',sans-serif;
+	font-size:24px;
+	line-height:30px;
+	border-radius:20px;
+	-webkit-border-radius:20px;
+	-moz-border-radius:20px;
+	border:0;
+	width:180px;
+	height:50px
+}
+
+input[type="radio"] {
+    display:none;
+}
+input[type="radio"] + label {
+    color: white;
+    font-family:'Adequate', sans-serif;
+    font-size:24px;
+    transition: color 0.5s;
+}
+
+input[type="radio"] + label:hover {
+    color: #ffbe43;
+}
+input[type="radio"] + label span {
+    display:inline-block;
+    width:25px;
+    height:25px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+    -moz-border-radius:  50%;
+    border-radius:  50%;
+}
+
+input[type="radio"] + label span {
+     background-color: white;
+}
+
+input[type="radio"]:checked + label span{
+     background-color: #ffbe43;
+}
+
+input[type="radio"] + label span,
+input[type="radio"]:checked + label span {
+  -webkit-transition:background-color 0.4s linear;
+  -o-transition:background-color 0.4s linear;
+  -moz-transition:background-color 0.4s linear;
+  transition:background-color 0.4s linear;
+}
+input[type="checkbox"] {
+    display:none;
+}
+input[type=checkbox] + label:before {
+    content: "";  
+    display: inline-block;  
+    width: 20px;  
+    height: 20px;  
+    vertical-align:middle;
+    margin-right: 8px;  
+    background-color: #aaa;  
+    box-shadow: inset 0px 2px 2px rgba(0, 0, 0, .3);
+    border-radius: 4px;  
+}
+input[type=checkbox]:checked + label:before {
+    content:"\2714"; /* Tick */
+    color:white;
+    background-color: #666; 
+    text-align:center;
+    line-height:15px;
+    text-shadow:0px 0px 3px #eee;
+}
