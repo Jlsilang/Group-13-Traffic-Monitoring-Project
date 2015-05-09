@@ -1,5 +1,3 @@
-//authors: Justin Silang, Jason Yang, Charu Jain 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +6,7 @@
     #map_canvas {height:260px;width:1250px;margin-left:auto;margin-right:auto}
     </style>
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript">
         var map;
         var markersArray = [];
@@ -32,6 +30,7 @@
                 // display the lat/lng in your form's lat/lng fields
                 document.getElementById("latFld").value = event.latLng.lat();
                 document.getElementById("lngFld").value = event.latLng.lng();
+	          
             });
         }
         function placeMarker(location) {
@@ -86,6 +85,7 @@ Report type:
 <option value="Event" <?php echo($incident_report == "Event"?' selected="selected"':null)?>>Event</option>
 <option value="Traffic" <?php echo($incident_report == "Traffic"?' selected="selected"':null)?>>Traffic</option>
 <option value="Police Sighting" <?php echo($incident_report == "Police Sighting"?' selected="selected"':null)?>>Police Report</option>
+<option value ="Scenic Route" <?php echo($incident_report == "Scenic Route"?' selected="selected"' :null)?>>Scenic Route</option>
 <option value="Other" <?php echo($incident_report == "Other"?' selected="selected"':null)?>>Other</option>
 </select>
 </span>
@@ -106,7 +106,7 @@ Police Amount
 
 		
 		Road Name (Optional): <input type = "text" name = "roadname"><br><br> 
-		<input type = "submit" value = "Submit" class="styled-button-5"><br><br> 
+		<input id = 'submission' type = "submit" value = "Submit" class="styled-button-5"><br><br> 
 <a href="http://justincoding.com/trafficProject/" style="text-decoration:none">Return to Map Application</a>
 	</form>
 </body>

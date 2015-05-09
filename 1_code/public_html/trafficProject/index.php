@@ -58,11 +58,12 @@ $policesubmit = $_GET['submitpolice'];
 if (isset($policesubmit)){
 	$policeobject = new police_user_report('police');
 	$policeobject->store_police_info();
-	//$policeobject->print_police_info();
 	$policeobject->close_db();
-	for ($i = 0; $i < $policeobject->police_rows; ++$i){
-		$road_name = $policeobject->police_data_array[$i][5];
-		$MAP_OBJECT->addMarkerByCoords($policeobject->police_data_array[$i][4], $policeobject->police_data_array[$i][3],"", $html = "<font color = \"black\">$road_name</font>", $tooltip='', "http://i76.photobucket.com/albums/j39/jason5394/Police%20Icon_zpsct68n053.png?t=14279390859", "","");
+	$policeobject->verify_police_data(2);
+	//$policeobject->print_police_info();
+	for ($i = 0; $i < count($policeobject->verified_police_array); ++$i){
+		$road_name = $policeobject->verified_police_array[$i][5];
+		$MAP_OBJECT->addMarkerByCoords($policeobject->verified_police_array[$i][4], $policeobject->verified_police_array[$i][3],"", $html = "<font color = \"black\">$road_name</font>", $tooltip='', "http://i76.photobucket.com/albums/j39/jason5394/Police%20Icon_zpsct68n053.png?t=14279390859", "","");
 	}
 }
 
@@ -73,9 +74,33 @@ if (isset($usersubmit)){
 	$userobject->store_user_info();
 	//$userobject->print_user_info();
 	$userobject->close_db();
-	for ($i = 0; $i < $userobject->user_rows; ++$i){
-		$incident_label = $userobject->user_data_array[$i][2];
-		$MAP_OBJECT->addMarkerByCoords($userobject->user_data_array[$i][4], $userobject->user_data_array[$i][3],"", $html = "<font color = \"black\">$incident_label</font>", $tooltip='', "http://i76.photobucket.com/albums/j39/jason5394/User%20Icon_zpszi8qfgzy.png?t=1427939083", "","");
+	$userobject->verify_user_data(2);
+	for ($i = 0; $i < count($userobject->verified_user_array); ++$i){
+		$incident_label = $userobject->verified_user_array[$i][2];
+		//echo $incident_label .'<br>';
+		$image_link = "http://i76.photobucket.com/albums/j39/jason5394/User%20Icon_zpszi8qfgzy.png?t=1427939083";
+		if ($incident_label == "Scenic Route"){
+			$image_link = "http://i76.photobucket.com/albums/j39/jason5394/1430469377_Rose_zpsncaadjfi.png";
+		}
+		else if ($incident_label == "Construction"){
+			$image_link = "http://i76.photobucket.com/albums/j39/jason5394/1430469274_cono-24_zpst1ljselo.png";
+		}
+		else if ($incident_label == "Traffic"){
+			$image_link = "http://i76.photobucket.com/albums/j39/jason5394/1430467983_traffic-light-24_zpscvywbjqr.png";
+		}
+		else if ($incident_label == "Pothole"){
+			$image_link = "http://i76.photobucket.com/albums/j39/jason5394/9d228279-64e3-4283-9315-e000e5d201ef_zpsxzc0cii4.png";
+		}
+		else if ($incident_label == "Event"){
+			$image_link = "http://i76.photobucket.com/albums/j39/jason5394/1430468559_event_zpsf3ylwyfh.png";
+		}
+		else if ($incident_label == "Natural Blockage"){
+			$image_link = "http://i76.photobucket.com/albums/j39/jason5394/1430468487_inkscape_zpsv9cg6puq.png";
+		}
+		else if ($incident_label == "Accident"){
+			$image_link = "http://i76.photobucket.com/albums/j39/jason5394/1430469157_7-24_zpsdilzcnli.png";
+		}
+		$MAP_OBJECT->addMarkerByCoords($userobject->verified_user_array[$i][4], $userobject->verified_user_array[$i][3],"", $html = "<font color = \"black\">$incident_label</font>", $tooltip='', $image_link, "","");
 		//User Report Icon is temporary until further notice
 	}
 }
@@ -145,9 +170,7 @@ Traffic History<br></p>
 </span> 
 
 <br>
-<br><span class="hovtrans">
-Time:</span>
-<input class = "textbox" type="text"  value="<?php echo $_GET['time'];?>">
+<br>
 &nbsp;
 <span class="hovtrans">
 Day Selection:</span>
@@ -207,6 +230,10 @@ Weather:
 <br><a href="help.html" class="links" style="opacity: 0.001;">Help</a> 
 &nbsp;
 <a href="about.html" class="links" style="opacity: 0.001;">About</a>
+<br><br>
+<a href="about.html" class="links" style="opacity: 0.001;">About</a>
+<br><br>
+<a href="Fast.php" class="links">Fastest Route</a>
 <br><br>
 
 </body>

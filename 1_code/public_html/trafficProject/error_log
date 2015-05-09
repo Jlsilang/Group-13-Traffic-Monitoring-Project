@@ -1,0 +1,28 @@
+[26-Apr-2015 23:42:48 UTC] PHP Fatal error:  Maximum execution time of 600 seconds exceeded in /home/jlsilang/public_html/trafficProject/include/SeverityCalc.php on line 0
+[26-Apr-2015 23:43:27 UTC] PHP Fatal error:  Maximum execution time of 600 seconds exceeded in /home/jlsilang/public_html/trafficProject/include/SeverityCalc.php on line 0
+[26-Apr-2015 23:43:41 UTC] PHP Fatal error:  Maximum execution time of 600 seconds exceeded in /home/jlsilang/public_html/trafficProject/include/SeverityCalc.php on line 12
+[26-Apr-2015 23:49:47 UTC] PHP Fatal error:  Maximum execution time of 600 seconds exceeded in /home/jlsilang/public_html/trafficProject/include/SeverityCalc.php on line 57
+[27-Apr-2015 00:37:06 UTC] PHP Fatal error:  Maximum execution time of 600 seconds exceeded in /home/jlsilang/public_html/trafficProject/include/SeverityCalc.php on line 160
+[27-Apr-2015 04:41:52 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/jlsilang/public_html/trafficProject/include/police_user_connect.php on line 111
+[27-Apr-2015 04:42:10 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/jlsilang/public_html/trafficProject/include/police_user_connect.php on line 116
+[27-Apr-2015 04:42:39 UTC] PHP Fatal error:  Cannot use [] for reading in /home/jlsilang/public_html/trafficProject/include/police_user_connect.php on line 125
+[27-Apr-2015 05:05:22 UTC] PHP Fatal error:  Using $this when not in object context in /home/jlsilang/public_html/trafficProject/index.php on line 63
+[27-Apr-2015 05:06:01 UTC] PHP Fatal error:  Using $this when not in object context in /home/jlsilang/public_html/trafficProject/index.php on line 63
+[27-Apr-2015 05:06:04 UTC] PHP Fatal error:  Using $this when not in object context in /home/jlsilang/public_html/trafficProject/index.php on line 63
+[27-Apr-2015 05:09:09 UTC] PHP Fatal error:  Function name must be a string in /home/jlsilang/public_html/trafficProject/index.php on line 63
+[27-Apr-2015 05:09:24 UTC] PHP Fatal error:  Call to undefined function find_distance() in /home/jlsilang/public_html/trafficProject/include/police_user_connect.php on line 116
+[27-Apr-2015 05:25:48 UTC] PHP Fatal error:  Call to undefined function push_array() in /home/jlsilang/public_html/trafficProject/include/police_user_connect.php on line 126
+[27-Apr-2015 05:27:38 UTC] PHP Fatal error:  Cannot use [] for reading in /home/jlsilang/public_html/trafficProject/include/police_user_connect.php on line 126
+[27-Apr-2015 05:27:44 UTC] PHP Fatal error:  Cannot use [] for reading in /home/jlsilang/public_html/trafficProject/include/police_user_connect.php on line 126
+[27-Apr-2015 05:34:01 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/jlsilang/public_html/trafficProject/include/police_user_connect.php on line 127
+[27-Apr-2015 05:41:12 UTC] PHP Fatal error:  Cannot use [] for reading in /home/jlsilang/public_html/trafficProject/include/police_user_connect.php on line 130
+[27-Apr-2015 05:41:22 UTC] PHP Parse error:  syntax error, unexpected T_STRING in /home/jlsilang/public_html/trafficProject/include/police_user_connect.php on line 130
+[30-Apr-2015 22:19:11 UTC] PHP Fatal error:  Allowed memory size of 1073741824 bytes exhausted (tried to allocate 75 bytes) in /home/jlsilang/public_html/trafficProject/include/GoogleMap.php on line 1183
+[30-Apr-2015 22:20:07 UTC] PHP Fatal error:  Allowed memory size of 1073741824 bytes exhausted (tried to allocate 32 bytes) in /home/jlsilang/public_html/trafficProject/include/GoogleMap.php on line 1527
+[30-Apr-2015 22:20:42 UTC] PHP Fatal error:  Allowed memory size of 1073741824 bytes exhausted (tried to allocate 32 bytes) in /home/jlsilang/public_html/trafficProject/include/GoogleMap.php on line 1527
+[30-Apr-2015 22:20:56 UTC] PHP Fatal error:  Allowed memory size of 1073741824 bytes exhausted (tried to allocate 77 bytes) in /home/jlsilang/public_html/trafficProject/include/GoogleMap.php on line 1185
+[30-Apr-2015 22:24:18 UTC] PHP Fatal error:  Allowed memory size of 1073741824 bytes exhausted (tried to allocate 76 bytes) in /home/jlsilang/public_html/trafficProject/include/GoogleMap.php on line 1184
+[01-May-2015 05:43:52 UTC] PHP Parse error:  syntax error, unexpected '>' in /home/jlsilang/public_html/trafficProject/index.php on line 80
+[01-May-2015 05:44:01 UTC] PHP Parse error:  syntax error, unexpected '>' in /home/jlsilang/public_html/trafficProject/index.php on line 80
+[01-May-2015 05:44:02 UTC] PHP Parse error:  syntax error, unexpected '>' in /home/jlsilang/public_html/trafficProject/index.php on line 80
+[01-May-2015 05:44:05 UTC] PHP Parse error:  syntax error, unexpected '>' in /home/jlsilang/public_html/trafficProject/index.php on line 80

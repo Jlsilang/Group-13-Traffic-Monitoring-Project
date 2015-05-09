@@ -3,7 +3,7 @@ print "Content-Type: text/html\n"
 '''
 Created on Feb 22, 2011
 
-@authors: Justin Silang, Charu Jain, Akshay Sardana, Jason Yang
+@author: aditya devarakonda
 '''
 import urllib
 import MySQLdb

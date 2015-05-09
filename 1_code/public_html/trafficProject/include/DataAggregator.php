@@ -1,5 +1,5 @@
 <?php
-//@ author: Justin Silang, Jason Yang
+//@ author: Justin Silang
 	/* road 
 	region
 weather
