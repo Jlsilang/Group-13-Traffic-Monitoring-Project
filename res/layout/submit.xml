@@ -1,0 +1,114 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" 
+            android:orientation="vertical">
+    
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"  
+        android:orientation="horizontal" >
+        <Button
+        android:id="@+id/directionsbutton"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        android:text="@string/trafficdirections" />
+
+        <Button
+        android:id="@+id/submittrafficreport"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        android:text="@string/submittrafficreport" />
+    </LinearLayout>
+    
+
+ <FrameLayout android:id="@+id/map_frame"
+      android:layout_width="fill_parent"
+         android:layout_height="0dp"
+      android:layout_weight="0.4" >
+  
+	<fragment
+		android:id="@+id/map" 
+		    android:layout_width="wrap_content"   
+			  android:layout_height="match_parent" 
+	  	class="com.google.android.gms.maps.SupportMapFragment"
+	  	/>
+</FrameLayout>	
+	
+	
+ 
+    
+     <LinearLayout android:id="@+id/report_frame"
+      android:layout_width="fill_parent"
+         android:layout_height="0dp"
+      android:layout_weight="0.4" 
+      android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+              
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Time Period" />
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+    
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Weather" />
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+    
+         <Button
+        android:id="@+id/getreportbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Report"
+         />
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/severity" />
+    
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5sp"
+        android:src="@drawable/ic_launcher" />
+	</LinearLayout>
+
+
+</LinearLayout>
